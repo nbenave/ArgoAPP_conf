@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argocd-app-deployment-prod
+spec:
+  selector:
+    matchLabels:
+      app: argocd-app-prod
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: argocd-app-prod
+    spec:
+      containers:
+        - name: argocd-app-prod
+          image:
