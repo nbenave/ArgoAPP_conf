@@ -15,3 +15,5 @@ spec:
       containers:
         - name: argocd-app-test
           image: benave/dev:argo-app-test-latest
+      imagePullSecrets:
+        - name: dockerhub-secret
